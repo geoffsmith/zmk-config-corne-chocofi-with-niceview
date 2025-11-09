@@ -59,7 +59,7 @@
             };
             sym_caps: sym_caps_lock {
                 compatible = "zmk,behavior-hold-tap";
-                #binding-cells = <0>;
+                #binding-cells = <2>;
                 tapping-term-ms = <200>;
                 bindings = <&caps_word>, <&mo>;
             };
