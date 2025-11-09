@@ -57,6 +57,12 @@
                 hold-trigger-key-positions = <KEYS_L THUMBS>; // List of keys on the left side of the keyboard
                 hold-trigger-on-release;
             };
+            sym_caps: sym_caps_lock {
+                compatible = "zmk,behavior-mod-tap";
+                #binding-cells = <2>;
+                tapping-term-ms = <200>;
+                bindings = <&caps_word>, <&mo 1>;
+            };
         };
 
 
@@ -70,10 +76,10 @@
 // | SHFT |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | ESC  |
 //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
-   &kp TAB   &kp Q       &kp W       &kp E         &kp R         &kp T        &kp Y   &kp U          &kp I         &kp O        &kp P          &kp BSPC
-   &kp LCTRL &hml LALT A &hml LGUI S &hml LCTRL D  &hml LSHIFT F &kp G        &kp H   &hmr LSHIFT J  &hmr LCTRL K  &hmr LGUI L  &hmr LALT SEMI &kp SQT
-   &kp LSHFT &kp Z       &kp X       &kp C         &kp V         &kp B        &kp N   &kp M          &kp COMMA     &kp DOT      &kp FSLH       &kp ESC
-                                                  &kp LGUI &mo 1 &mo 2        &kp RET &kp SPACE      &kp TAB
+   &kp TAB   &kp Q       &kp W       &kp E         &kp R             &kp T   &kp Y   &kp U          &kp I         &kp O        &kp P          &kp BSPC
+   &kp LCTRL &hml LALT A &hml LGUI S &hml LCTRL D  &hml LSHIFT F     &kp G   &kp H   &hmr LSHIFT J  &hmr LCTRL K  &hmr LGUI L  &hmr LALT SEMI &kp SQT
+   &kp LSHFT &kp Z       &kp X       &kp C         &kp V             &kp B   &kp N   &kp M          &kp COMMA     &kp DOT      &kp FSLH       &kp ESC
+                                                  &kp LGUI &sym_caps &mo 2   &kp RET &kp SPACE      &kp TAB
                         >;
                 };
                 /* keys needed:
