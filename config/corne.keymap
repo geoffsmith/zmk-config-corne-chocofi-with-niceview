@@ -13,8 +13,18 @@
 #define KEYS_L LT0 LT1 LT2 LT3 LT4 LM0 LM1 LM2 LM3 LM4 LB0 LB1 LB2 LB3 LB4  // Left-hand keys.
 #define KEYS_R RT0 RT1 RT2 RT3 RT4 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RB4  // Right-hand keys.
 #define THUMBS LH2 LH1 LH0 RH0 RH1 RH2  
+#define SP(x) LA(LC(LS(x))))
 
 / {
+        combos {
+            compatible = "zmk,combos";
+            combo_nav {
+                timeout-ms = <50>;
+                key-positions = <LM2 LM1>;
+                bindings = <&mo 3>;
+            };
+        };
+
         behaviors {
             hml: home_row_mod_left {
                 compatible = "zmk,behavior-hold-tap";
@@ -72,7 +82,7 @@
    &kp TAB    &kp CARET   &kp N2      &kp AT      &kp EXCL  &trans          &kp NUHS   &kp LPAR &kp RPAR &kp MINUS &kp PLUS  &kp N0
    &bt BT_CLR &kp GRAVE   &kp TILDE   &kp SQT     &kp DQT   &kp DLLR        &kp BSPC   &kp LBKT &kp RBKT &kp UNDER &kp EQUAL &trans
    &kp LSHFT  &trans      &trans      &trans      &kp PRCNT &trans          &kp STAR   &kp LBRC &kp RBRC &kp BSLH  &kp PIPE  &trans
-                                	   &kp LGUI    &trans    &kp SPACE       &kp RET    &trans   &kp RALT
+                                	   &kp LGUI    &trans    &kp SPACE      &kp RET    &kp RET   &kp RALT
                         >;
                 };
 
@@ -87,6 +97,15 @@
    &kp LCTRL &trans   &trans &trans   &trans   &trans      &kp MINUS &kp EQUAL &kp LBKT        &kp RBKT &kp BSLH &kp GRAVE
    &kp LSHFT &trans   &trans &trans   &trans   &trans      &kp UNDER &kp PLUS  &kp LBRC        &kp RBRC &kp PIPE &kp TILDE
                     	     &kp LGUI &trans   &kp SPACE   &kp RET   &trans    &kp RALT
+                        >;
+                };
+
+                nav_layer {
+                        bindings = <
+   &trans &trans   &trans &trans   &trans   &trans      &trans   &kp LA(N1) &kp LA(N2) &kp LA(N3) &kp LA(N4) &trans
+   &trans &trans   &trans &trans   &trans   &trans      &kp LEFT &kp DOWN   &kp UP     &kp RIGHT  &kp LA(N5) &trans
+   &trans &trans   &trans &trans   &trans   &trans      &trans   &kp SP(N)  &trans     &trans     &trans     &trans
+                    	    &trans &trans   &trans      &trans   &trans     &trans
                         >;
                 };
         };
