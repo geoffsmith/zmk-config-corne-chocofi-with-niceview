@@ -95,10 +95,10 @@
 // | SHFT |     |     |     |     |     |   |     |     |     |     |     |      |
 //                    | GUI |     | SPC |   | ENT |     | ALT |
                         bindings = <
-   &kp TAB    &kp CARET   &kp N2      &kp AT    &kp EXCL  &trans     &kp HASH   &kp LPAR &kp RPAR &kp MINUS &kp PLUS  &kp N0
-   &bt BT_CLR &kp TILDE   &kp GRAVE   &kp SQT   &kp DQT   &kp DLLR   &kp BSPC   &kp LBKT &kp RBKT &kp UNDER &kp EQUAL &trans
-   &kp LSHFT  &trans      &trans      &trans    &kp PRCNT &trans     &kp STAR   &kp LBRC &kp RBRC &kp BSLH  &kp PIPE  &trans
-                                	  &trans    &trans    &trans     &trans     &kp RET   &trans
+   &kp TAB    &kp CARET   &kp N2      &kp AT    &kp EXCL  &trans     &kp RA(HASH) &kp LPAR &kp RPAR &kp MINUS &kp PLUS  &kp N0
+   &bt BT_CLR &kp TILDE   &kp GRAVE   &kp SQT   &kp DQT   &kp DLLR   &kp BSPC     &kp LBKT &kp RBKT &kp UNDER &kp EQUAL &trans
+   &kp LSHFT  &trans      &trans      &trans    &kp PRCNT &trans     &kp STAR     &kp LBRC &kp RBRC &kp BSLH  &kp PIPE  &trans
+                                	  &trans    &trans    &trans     &trans       &kp RET   &trans
                         >;
                 };
 
