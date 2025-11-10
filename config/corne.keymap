@@ -61,7 +61,7 @@
             sym_caps2: caps_word_layer_tap_dance {
                 compatible = "zmk,behavior-tap-dance";
                 #binding-cells = <0>;
-                bindings = <&mo 1>, <&caps_work>;
+                bindings = <&mo 1>, <&caps_word>;
                 tapping-term-ms = <200>;
                 flavor = "hold-preferred";
                 tap-count = <2>;
