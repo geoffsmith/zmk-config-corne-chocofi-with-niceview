@@ -63,8 +63,6 @@
                 #binding-cells = <0>;
                 bindings = <&mo 1>, <&caps_word>;
                 tapping-term-ms = <200>;
-                flavor = "hold-preferred";
-                tap-count = <2>;
             };
         };
 
